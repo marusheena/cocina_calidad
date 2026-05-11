@@ -118,6 +118,140 @@ const temas = {
             { q: '¿Cuál NO aumenta la vida útil de crustáceos y moluscos?', opts: ['Refrigeración', 'Salazón', 'Exposición al aire a temperatura ambiente', 'Envasado al vacío'], correct: 2, exp: 'La exposición al aire acelera la alteración' }
         ]
     },
+    preelaboracion: {
+        nombre: 'Preelaboración',
+        flashcards: [
+            { q: 'La leche pasterizada se conserva 72 horas refrigerada.', a: '✅ VERDADERO. Solo destruye patógenos, no todos los microorganismos.' },
+            { q: 'La leche UHT y la esterilizada se conservan varios meses sin refrigeración.', a: '✅ VERDADERO. Ambas eliminan todos los microorganismos. La UHT se envasa en condiciones asépticas.' },
+            { q: 'La leche en polvo ocupa 10 veces menos que la leche líquida y se reconstituye al 10%.', a: '✅ VERDADERO. Se usa en pastelería, panadería y buffets de desayuno.' },
+            { q: 'Para montar nata se necesita un mínimo del 32-33% de materia grasa.', a: '✅ VERDADERO. Con menos grasa no monta correctamente.' },
+            { q: 'Para cocinar y espesar salsas se usa nata con un 18% de materia grasa.', a: '✅ VERDADERO. La nata de cocinar tiene menos grasa que la de montar.' },
+            { q: 'La nata doble tiene un 50% o más de materia grasa.', a: '✅ VERDADERO. Es la nata con mayor contenido graso.' },
+            { q: 'La mantequilla se obtiene al batir la nata y contiene vitaminas A y D.', a: '✅ VERDADERO. Es una grasa de gran calidad y sabor característico.' },
+            { q: 'La mantequilla clarificada se obtiene calentándola lentamente durante 30 minutos. Se usa para carnes y pescados a la parrilla.', a: '✅ VERDADERO. Clarificar elimina el agua y las proteínas, solo queda la grasa pura.' },
+            { q: 'Los huevos de categoría A son frescos y aptos para consumo directo.', a: '✅ VERDADERO. Los de categoría B no son aptos para consumo directo: uso industrial.' },
+            { q: 'La caducidad de los huevos es de 28 días desde la puesta.', a: '✅ VERDADERO. A partir de ahí no deben consumirse en crudo ni poco cocinados.' },
+            { q: 'Un huevo fresco tiene la yema centrada y la clara recogida.', a: '✅ VERDADERO. Si la clara es acuosa y la yema está hundida, el huevo está menos fresco.' },
+            { q: 'Las tallas de huevo son: S (43-53g), M (53-63g), L (63-73g) y XL (más de 73g).', a: '✅ VERDADERO. La clasificación por peso es obligatoria en los huevos de categoría A.' },
+            { q: 'La yema del huevo coagula a mayor temperatura que la clara: coagula a 80°C.', a: '✅ VERDADERO. La clara coagula antes, a menor temperatura que la yema.' },
+            { q: 'En elaboraciones que no superen 75°C en el centro del producto se debe usar huevo líquido pasterizado.', a: '✅ VERDADERO. Para garantizar la seguridad alimentaria sin alcanzar temperatura de pasteurización.' },
+            { q: 'Está prohibido elaborar mahonesa, salsa holandesa y bearnesa con huevo crudo en cocina.', a: '✅ VERDADERO. Son elaboraciones con huevo crudo que pueden contener Salmonella.' },
+            { q: 'Nunca se casca el huevo en el mismo recipiente donde se va a batir.', a: '✅ VERDADERO. Si hay un huevo en mal estado contaminaría toda la mezcla.' },
+            { q: 'Los huevos no deben lavarse hasta el momento de su uso.', a: '✅ VERDADERO. Lavar elimina la cutícula protectora que impide la entrada de bacterias.' },
+            { q: 'El arroz categoría Extra tiene etiqueta roja y un mínimo del 92% de granos enteros.', a: '✅ VERDADERO. Primera: etiqueta verde, 87%. Segunda: etiqueta amarilla, 80%.' },
+            { q: 'El arroz de grano redondo es pegajoso al cocer y se usa para sushi.', a: '✅ VERDADERO. Es de variedad japónica, con mucha amilopectina que lo hace pegajoso.' },
+            { q: 'El arroz integral tarda hasta 45 minutos en cocer y es más rico en vitaminas del grupo B.', a: '✅ VERDADERO. Al conservar el salvado tiene más nutrientes pero necesita más tiempo.' },
+            { q: 'El arroz vaporizado no se pega ni se pasa, pero resulta más insípido.', a: '✅ VERDADERO. El tratamiento previo conserva vitaminas pero le resta sabor.' },
+            { q: 'Para risotto se usan 17 minutos de cocción, añadiendo el caldo poco a poco y removiendo continuamente.', a: '✅ VERDADERO. Remover continuamente hace que el arroz suelte almidón y quede cremoso.' },
+            { q: 'Para guarniciones o ensaladas: 4 partes de agua por 1 de arroz y refrescado inmediato tras la cocción.', a: '✅ VERDADERO. El refrescado corta la cocción y separa los granos.' },
+            { q: 'Los arroces secos (paella) necesitan 3-4 partes de líquido por 1 de arroz y no se remueven.', a: '✅ VERDADERO. Remover rompería los granos y soltaría el almidón en exceso.' },
+            { q: 'Las pastas de calidad superior se elaboran solo con sémola de trigo duro y tienen un mínimo del 11% de proteína.', a: '✅ VERDADERO. Las de calidad corriente tienen un mínimo del 9,5% de proteína.' },
+            { q: 'Las pastas rellenas deben llevar un mínimo del 25% de relleno.', a: '✅ VERDADERO. Es el porcentaje mínimo exigido por el Código Alimentario Español.' },
+            { q: 'La pasta fresca está lista cuando sube a la superficie del agua en ebullición.', a: '✅ VERDADERO. A diferencia de la pasta seca, la fresca cuece en muy poco tiempo.' },
+            { q: 'Las pastas para acompañar con salsas se escurren y se saltean con la salsa sin escurrir del todo.', a: '✅ VERDADERO. Un poco del agua de cocción ayuda a ligar la salsa con la pasta.' },
+            { q: 'Los gnoquis son bolas o cilindros de patata, harina, sémola, leche y huevo que se escaldan.', a: '✅ VERDADERO. Son una preparación italiana que se sirve con salsa.' },
+            { q: 'El cous cous se prepara añadiendo la misma cantidad de agua que de sémola y dejando absorber el líquido.', a: '✅ VERDADERO. Se añade mantequilla o aceite al final para que los granos queden sueltos.' },
+            { q: 'La pasta philo se pinta con mantequilla y se hornea a 175°C durante 7 minutos hasta quedar crujiente y dorada.', a: '✅ VERDADERO. Se presenta en finas hojas enrolladas que se conservan en refrigeración.' },
+            { q: 'Los fideos de arroz se fríen sin escaldado previo en abundante aceite: se inflan y quedan crujientes.', a: '✅ VERDADERO. Es su característica principal frente a otras pastas que necesitan cocción previa.' },
+            { q: 'La pasta wonton se escalda previamente, se rellena, se fríe y queda con el exterior crujiente.', a: '✅ VERDADERO. Es una pasta fina de origen asiático usada para elaborar raviolis orientales.' },
+            { q: 'Las setas y hongos son vegetales sin flor ni clorofila que crecen en lugares húmedos, oscuros y ricos en materia orgánica.', a: '✅ VERDADERO. Se clasifican en comestibles, sin valor gastronómico y tóxicas.' },
+            { q: 'Las setas cultivadas (champiñón, shiitake) están disponibles en el mercado todo el año.', a: '✅ VERDADERO. Al ser cultivadas no dependen de la estacionalidad ni del clima.' },
+            { q: 'Las setas silvestres (boletos, níscalos, trufas, colmenillas) son más apreciadas y tienen precio superior por su estacionalidad y localización incierta.', a: '✅ VERDADERO. No se pueden cultivar de forma controlada, lo que encarece su precio.' },
+            { q: 'Las setas se presentan comercialmente frescas, congeladas, deshidratadas y en conserva.', a: '✅ VERDADERO. La deshidratación es muy habitual en setas silvestres como las colmenillas o los boletos.' }
+        ],
+        test: [
+            { q: '¿Cuánto tiempo se conserva la leche pasterizada refrigerada?', opts: ['24 horas', '48 horas', '72 horas', '7 días'], correct: 2, exp: 'La pasterización destruye los patógenos pero no todos los microorganismos, por eso su conservación es corta: 72 horas en frío.' },
+            { q: '¿Qué porcentaje mínimo de materia grasa necesita la nata para poder montarse?', opts: ['18%', '25%', '32-33%', '50%'], correct: 2, exp: 'Con menos del 32% la nata no monta correctamente. El 18% es para cocinar y el 50% es nata doble.' },
+            { q: '¿Cómo se obtiene la mantequilla clarificada?', opts: ['Batiendo la nata a alta velocidad', 'Calentándola lentamente durante 30 minutos', 'Mezclándola con aceite de oliva', 'Enfriándola rápidamente'], correct: 1, exp: 'Clarificar elimina el agua y las proteínas de la mantequilla. Solo queda la grasa pura, ideal para parrilla y salsas.' },
+            { q: '¿Qué categoría tiene un huevo apto para consumo directo?', opts: ['Categoría B', 'Categoría Extra', 'Categoría A', 'Categoría Primera'], correct: 2, exp: 'Categoría A = frescos, consumo directo, clasificados por peso. Categoría B = uso industrial, no aptos para consumo directo.' },
+            { q: '¿A qué temperatura coagula la yema del huevo?', opts: ['60°C', '70°C', '75°C', '80°C'], correct: 3, exp: 'La yema coagula a 80°C, a mayor temperatura que la clara. Por eso en elaboraciones que no superan 75°C hay que usar huevo pasterizado.' },
+            { q: '¿Cuántos días de caducidad tienen los huevos desde la puesta?', opts: ['14 días', '21 días', '28 días', '35 días'], correct: 2, exp: '28 días desde la puesta es la caducidad legal de los huevos frescos de categoría A.' },
+            { q: '¿Qué etiqueta tiene el arroz de categoría Extra?', opts: ['Verde', 'Amarilla', 'Azul', 'Roja'], correct: 3, exp: 'Extra = etiqueta roja, mínimo 92% granos enteros. Primera = verde, 87%. Segunda = amarilla, 80%.' },
+            { q: '¿Qué tipo de arroz se usa para el sushi?', opts: ['Arroz largo tipo índica', 'Arroz integral', 'Arroz de grano redondo japónica', 'Arroz vaporizado'], correct: 2, exp: 'El arroz de grano redondo tiene mucha amilopectina, lo que lo hace pegajoso al cocer. Ideal para sushi.' },
+            { q: '¿Cuántos minutos se cuece el arroz para risotto?', opts: ['10 minutos', '17 minutos', '20 minutos', '45 minutos'], correct: 1, exp: '17 minutos añadiendo caldo poco a poco y removiendo continuamente para que suelte almidón y quede cremoso.' },
+            { q: '¿Qué porcentaje mínimo de proteína tienen las pastas de calidad superior?', opts: ['9,5%', '10%', '11%', '13%'], correct: 2, exp: 'Calidad superior: mínimo 11% de proteína, solo con sémola de trigo duro. Calidad corriente: mínimo 9,5%.' },
+            { q: '¿Qué porcentaje mínimo de relleno deben llevar las pastas rellenas?', opts: ['10%', '15%', '20%', '25%'], correct: 3, exp: 'El Código Alimentario Español exige un mínimo del 25% de relleno en las pastas rellenas.' },
+            { q: '¿Cuándo está lista la pasta fresca?', opts: ['Tras 10 minutos de cocción', 'Cuando sube a la superficie del agua', 'Cuando el agua vuelve a hervir', 'Tras 5 minutos desde que rompe a hervir'], correct: 1, exp: 'La pasta fresca cuece muy rápido. La señal es que sube a la superficie del agua en ebullición.' },
+            { q: '¿A qué temperatura y cuánto tiempo se hornea la pasta philo?', opts: ['150°C, 15 minutos', '175°C, 7 minutos', '200°C, 5 minutos', '160°C, 10 minutos'], correct: 1, exp: 'Pintar con mantequilla y hornear a 175°C durante 7 minutos hasta que quede crujiente y ligeramente dorada.' },
+            { q: '¿Qué característica tienen los fideos de arroz al freírse?', opts: ['Se ablandan y quedan cremosos', 'Se deshacen si no se escaldan antes', 'Se inflan y quedan crujientes sin escaldado previo', 'Necesitan remojo previo de 30 minutos'], correct: 2, exp: 'Los fideos de arroz se fríen directamente en abundante aceite sin escaldado. Se inflan y quedan crujientes.' },
+            { q: '¿Cuál de estas setas está disponible todo el año en el mercado?', opts: ['Níscalo', 'Boleto', 'Colmenilla', 'Champiñón'], correct: 3, exp: 'El champiñón es una seta cultivada, disponible todo el año. Las silvestres (níscalo, boleto, colmenilla) dependen de la estacionalidad.' },
+            { q: '¿Cómo se presentan comercialmente las setas y hongos?', opts: ['Solo frescas y congeladas', 'Solo deshidratadas y en conserva', 'Frescas, congeladas, deshidratadas y en conserva', 'Solo frescas'], correct: 2, exp: 'Las cuatro formas de presentación son válidas. La deshidratación es muy habitual en setas silvestres de alto valor.' }
+        ]
+    },
+    cafeteria: {
+        nombre: 'Cafetería y Sala',
+        flashcards: [
+            { q: 'El café arábiga es la variedad más valorada, con cafeína entre el 1 y el 1,5% y aromas delicados.', a: '✅ VERDADERO. La robusta tiene ~3% de cafeína y sabor más fuerte y amargo.' },
+            { q: 'La torrefacción consiste en añadir azúcar al café antes del tueste y está permitida en toda la UE.', a: '❌ FALSO. Está prohibida en la mayoría de la UE. En España está permitida por tradición. Produce cafés de menor calidad.' },
+            { q: 'El tratamiento por vía húmeda produce cafés de mayor calidad y aromas menos amargos que la vía seca.', a: '✅ VERDADERO. La vía húmeda fermenta y lava el grano.' },
+            { q: 'Los "Suaves colombianos" son cafés arábiga tratados por vía húmeda, producidos en Colombia, Kenia y Tanzania.', a: '✅ VERDADERO. Son la categoría más alta de la clasificación internacional.' },
+            { q: 'Para un espresso perfecto: 7-8g de café, agua a ~90°C, 8-10 bares, 25-30 segundos, 20-35ml de infusión.', a: '✅ VERDADERO. Esos son los parámetros exactos de un espresso correcto.' },
+            { q: 'Un espresso sobreextraído (más de 30 segundos) tiene sabor ácido.', a: '❌ FALSO. El sobreextraído es amargo. El subextraído (menos de 20s) es ácido.' },
+            { q: 'La crema de un espresso bien elaborado tiene color avellana y aromas tostados.', a: '✅ VERDADERO. Si la crema es muy oscura o no hay crema, el café está mal elaborado.' },
+            { q: 'Para calentar leche sin espuma, el vaporizador se sumerge completamente hasta el fondo de la jarra.', a: '✅ VERDADERO. El objetivo es calentar sin introducir aire. Temperatura: 60-65°C.' },
+            { q: 'Para cremar leche, la punta del vaporizador se coloca justo debajo de la superficie de la leche.', a: '✅ VERDADERO. Se incorpora aire para crear microespuma. Se escucha un "chhh" suave.' },
+            { q: 'El cappuccino lleva partes iguales de café, leche y espuma (1/3 cada uno).', a: '✅ VERDADERO. Es la proporción clásica del cappuccino.' },
+            { q: 'El café bombón lleva leche condensada en el fondo y espresso encima, sin mezclar, en vaso de cristal.', a: '✅ VERDADERO. La leche condensada queda abajo por ser más densa.' },
+            { q: 'El café irlandés lleva espresso doble, whisky irlandés con azúcar disuelto y nata semimontada por encima que no se mezcla.', a: '✅ VERDADERO. Se bebe atravesando la nata. Se sirve en copa irlandesa.' },
+            { q: 'Un café de especialidad SCA debe superar los 80 puntos en la escala de cata (cupping).', a: '✅ VERDADERO. Menos de 80 = café comercial. 90-100 = excepcional y muy raro.' },
+            { q: 'La leche entera tiene mínimo 3% de grasa. Semidesnatada: 0,5-1,5%. Desnatada: menos de 0,5%.', a: '✅ VERDADERO. Esos son los porcentajes exactos de la normativa.' },
+            { q: 'La acrilamida se forma en alimentos con almidón (patatas, pan, galletas) cuando se hornean, fríen, cuecen o tuestan.', a: '✅ VERDADERO. Se genera por la reacción de Maillard a altas temperaturas.' },
+            { q: 'Para reducir la acrilamida hay que freír a más de 200°C para acortar el tiempo de cocción.', a: '❌ FALSO. Hay que freír a máximo 175°C. La regla es "dorado pero no pasado".' },
+            { q: 'Las patatas deben conservarse en nevera para reducir la formación de acrilamida.', a: '❌ FALSO. Nunca en nevera. El frío aumenta los azúcares que generan acrilamida. Lugar fresco y oscuro.' },
+            { q: 'En la apertura de cafetería, el lavavajillas y la cafetera se encienden. En el cierre, se apagan y limpian.', a: '✅ VERDADERO. El orden de apertura y cierre sigue siempre el mismo protocolo.' },
+            { q: 'Al cierre, la caja y el datáfono se suben a secretaría.', a: '✅ VERDADERO. Es el último paso antes de apagar luces y poner candados.' },
+            { q: 'La restauración comercial tiene fin económico, amplio horario, precios elevados y oferta esmerada.', a: '✅ VERDADERO. Se divide en restauración tradicional y neorrestauración.' },
+            { q: 'La restauración colectiva va dirigida a "clientes cautivos" (comedores de empresa, colegios) con precios reducidos.', a: '✅ VERDADERO. Su beneficio viene del volumen y la reducción de costes.' },
+            { q: 'La deontología en hostelería regula las relaciones internas, con el cliente y con la sociedad.', a: '✅ VERDADERO. Son los tres grandes grupos de la deontología profesional.' },
+            { q: 'Un manipulador de alimentos puede fumar justo antes del servicio si no lo hace delante del cliente.', a: '❌ FALSO. Está prohibido fumar durante el servicio ni justo antes, para evitar aliento desagradable.' },
+            { q: 'La mise en place es el conjunto de operaciones para poner a punto el comedor antes del servicio.', a: '✅ VERDADERO. Expresión francesa. La supervisa el maître.' },
+            { q: 'En la toma de comanda, el anfitrión es el primero al que se toma nota por respeto.', a: '❌ FALSO. El anfitrión es el ÚLTIMO. Primero niños, luego señoras de mayor a menor edad, luego señores.' },
+            { q: 'El orden de comandas es: bebidas aperitivo → comidas → bebidas principales → postres → cafés y licores.', a: '✅ VERDADERO. Ese es el orden estándar en un servicio completo.' },
+            { q: 'La voz "Marcha" en cocina indica que se empieza a preparar. "Pasa" indica que el plato está listo.', a: '✅ VERDADERO. Son voces estandarizadas entre sala y cocina.' },
+            { q: 'En el servicio emplatado el plato llega terminado desde cocina. Es el más rápido y sencillo.', a: '✅ VERDADERO. Es el servicio más habitual en restaurantes modernos.' },
+            { q: 'En el servicio a la francesa el cliente se sirve él mismo desde la fuente que presenta el camarero.', a: '✅ VERDADERO. Es el más lento y está casi en desuso.' },
+            { q: 'Todas las bebidas se sirven y desbarasan por la derecha del cliente. El pan, por la izquierda.', a: '✅ VERDADERO. Es una de las máximas fundamentales del servicio.' },
+            { q: 'El protocolo de servicio establece que el anfitrión es el último en ser servido.', a: '✅ VERDADERO. El orden es: niñas, niños, señoras mayores, señoras jóvenes, hombres mayores, hombres jóvenes, anfitrión.' },
+            { q: 'Nunca se empieza a servir comida hasta que la mesa esté marcada, con bebidas y con pan.', a: '✅ VERDADERO. Es una máxima básica del servicio en sala.' },
+            { q: '"Marcar" en sala significa colocar los cubiertos adecuados delante del cliente antes de servir cada plato.', a: '✅ VERDADERO. Se marca antes de servir, no después.' },
+            { q: 'Las carnes rojas se marcan con cuchillo de steak (derecha) y tenedor de steak (izquierda).', a: '✅ VERDADERO. Las carnes blancas se marcan con cuchillo y tenedor trinchero.' },
+            { q: 'El pescado se marca siempre con pala de pescado (derecha) y tenedor de pescado (izquierda).', a: '✅ VERDADERO. Independientemente de cómo esté cocinado.' },
+            { q: 'Las bebidas carbonatadas nunca se introducen en la coctelera.', a: '✅ VERDADERO. La presión al agitar puede ser peligrosa. Las bebidas con gas se añaden siempre al final, directamente en el vaso.' },
+            { q: '1 onza (Oz) en coctelería equivale a 3 cl.', a: '✅ VERDADERO. Es la medida estándar del jigger.' },
+            { q: 'El Bloody Mary se elabora en vaso mezclador, no en coctelera.', a: '✅ VERDADERO. Es la excepción más conocida en coctelería.' },
+            { q: 'Los cócteles aperitivo se sirven en tragos cortos o medios y estimulan el apetito.', a: '✅ VERDADERO. Los digestivos llevan principalmente alcoholes y licores dulces.' },
+            { q: 'El jamón ibérico de bellota 100% tiene etiqueta negra. El de bellota con % ibérico, etiqueta roja.', a: '✅ VERDADERO. Verde = cebo de campo. Blanco = cebo de raza ibérica.' },
+            { q: 'El jamón serrano gran reserva tiene más de 15 meses de curación.', a: '✅ VERDADERO. Bodega: 10-12 meses. Reserva: 12-15 meses. Gran Reserva: +15 meses.' },
+            { q: 'El slow food apuesta por ingredientes locales y naturales y comer lenta y conscientemente.', a: '✅ VERDADERO. Nació como respuesta al fast food y la fast life.' },
+            { q: 'El free flow elimina las colas del self service ofreciendo islas donde el cliente elige y paga antes de pasar a la sala.', a: '✅ VERDADERO. Es más fluido que el self service en línea.' }
+        ],
+        test: [
+            { q: '¿Cuál es el contenido de cafeína del café arábiga?', opts: ['Entre el 1 y el 1,5%', 'Alrededor del 3%', 'Entre el 2 y el 2,5%', 'Menos del 0,5%'], correct: 0, exp: 'Arábiga: 1-1,5%, delicado y aromático. Robusta: ~3%, más fuerte y amargo.' },
+            { q: 'La torrefacción del café:', opts: ['Está permitida en toda la UE', 'Consiste en añadir azúcar antes del tueste y está prohibida en la mayoría de la UE', 'Mejora la calidad del café significativamente', 'Es obligatoria en los cafés de especialidad'], correct: 1, exp: 'Prohibida en la mayoría de la UE, permitida en España por tradición. Produce cafés de peor calidad.' },
+            { q: '¿Cuál es la temperatura correcta del agua para un espresso perfecto?', opts: ['75°C', '80°C', '90°C', '100°C'], correct: 2, exp: 'Espresso perfecto: agua a ~90°C, 7-8g café, 8-10 bares, 25-30 segundos.' },
+            { q: 'Un espresso subextraído (menos de 20 segundos) tiene sabor:', opts: ['Amargo', 'Ácido', 'Dulce', 'Sin sabor'], correct: 1, exp: 'Subextraído = ácido. Sobreextraído (más de 30s) = amargo. Perfecto (25-30s) = equilibrado.' },
+            { q: 'Para cremar leche, el vaporizador se coloca:', opts: ['Completamente sumergido hasta el fondo', 'Justo debajo de la superficie de la leche', 'Por encima de la leche sin tocarla', 'En el centro a media altura'], correct: 1, exp: 'Para cremar: justo debajo de la superficie, incorpora aire. Para calentar sin espuma: sumergido al fondo.' },
+            { q: '¿Qué proporción tiene el cappuccino?', opts: ['1/2 café y 1/2 leche', '1/3 café, 1/3 leche, 1/3 espuma', '1/4 café y 3/4 leche con espuma', '2/3 café y 1/3 espuma sin leche'], correct: 1, exp: 'El cappuccino clásico tiene tres partes iguales: café, leche y espuma.' },
+            { q: '¿A qué temperatura máxima se recomienda freír para reducir la acrilamida?', opts: ['150°C', '175°C', '200°C', '220°C'], correct: 1, exp: 'Máximo 175°C. Buscar color dorado, nunca marrón oscuro. "Dorado pero no pasado".' },
+            { q: '¿Dónde deben conservarse las patatas?', opts: ['En la nevera a 4°C', 'En el congelador', 'En lugar fresco y oscuro, nunca en nevera', 'En agua fría'], correct: 2, exp: 'La nevera aumenta los azúcares reductores que generan más acrilamida al freír.' },
+            { q: 'El sistema FIFO significa:', opts: ['Los productos más caros salen primero', 'Los primeros en entrar son los primeros en salir', 'Los últimos en entrar son los primeros en salir', 'Los productos frescos siempre tienen prioridad'], correct: 1, exp: 'First In, First Out. Evita que los productos caduquen.' },
+            { q: '¿Por qué lado se sirven las bebidas?', opts: ['Por la izquierda', 'Por la derecha', 'Por donde haya más espacio', 'Depende del tipo de bebida'], correct: 1, exp: 'Todas las bebidas se sirven y desbarasan por la derecha. El pan se sirve por la izquierda.' },
+            { q: '¿Quién es el último en recibir la comanda?', opts: ['El cliente mayor', 'El niño más pequeño', 'El anfitrión', 'La señora de más edad'], correct: 2, exp: 'Orden: niños → señoras mayor a menor edad → señores mayor a menor edad → anfitrión el último.' },
+            { q: 'Las carnes rojas se marcan con:', opts: ['Pala de pescado y tenedor de pescado', 'Cuchillo y tenedor trinchero', 'Cuchillo de steak (derecha) y tenedor de steak (izquierda)', 'Cuchara sopera y cuchillo trinchero'], correct: 2, exp: 'Carnes rojas → steak. Carnes blancas → trinchero.' },
+            { q: 'El café bombón se sirve en:', opts: ['Taza grande con platillo', 'Vaso pequeño de cristal con leche condensada en el fondo', 'Copa de balón', 'Taza de moca con nata'], correct: 1, exp: 'La leche condensada queda abajo por densidad. Espresso encima, sin mezclar.' },
+            { q: '¿Qué significa "marcar" en sala?', opts: ['Anotar el plato en la comanda', 'Colocar los cubiertos adecuados delante del cliente antes de servir', 'Señalar la mesa en el plano', 'Presentar la carta al cliente'], correct: 1, exp: 'Marcar = colocar los cubiertos correctos antes de servir cada plato.' },
+            { q: 'En el servicio a la francesa:', opts: ['El camarero emplata desde la fuente con la pinza', 'El plato llega terminado desde cocina', 'El cliente se sirve él mismo desde la fuente que presenta el camarero', 'Se termina el plato en el gueridón'], correct: 2, exp: 'Es el más lento, puede haber reparto desigual y está casi en desuso.' },
+            { q: 'La etiqueta negra en el jamón ibérico indica:', opts: ['Jamón serrano gran reserva', 'Jamón de bellota 100% ibérico', 'Jamón de cebo de campo', 'Jamón de bellota con porcentaje ibérico'], correct: 1, exp: 'Negro = 100% ibérico bellota. Rojo = bellota con % ibérico. Verde = cebo campo. Blanco = cebo ibérico.' },
+            { q: '¿Qué bebida nunca va en la coctelera?', opts: ['Zumo de limón', 'Vodka', 'Bebidas carbonatadas', 'Licores'], correct: 2, exp: 'Las bebidas con gas nunca van en coctelera. Se añaden siempre al final directamente en el vaso.' },
+            { q: '1 onza (Oz) en coctelería equivale a:', opts: ['1 cl', '2 cl', '3 cl', '5 cl'], correct: 2, exp: '1 Oz = 3 cl. Es la medida estándar del jigger en coctelería.' },
+            { q: 'El Bloody Mary se elabora en:', opts: ['Coctelera', 'Vaso mezclador', 'Directamente en el vaso', 'Batidora'], correct: 1, exp: 'Es la excepción más conocida: se hace en vaso mezclador, no en coctelera.' },
+            { q: 'Un café de especialidad SCA debe superar:', opts: ['70 puntos', '75 puntos', '80 puntos', '90 puntos'], correct: 2, exp: 'Más de 80 = especialidad. 90-100 = excepcional. Menos de 80 = café comercial.' },
+            { q: 'El slow food se define como:', opts: ['Comida rápida saludable', 'Filosofía de alimentación con ingredientes locales, naturales, comiendo lenta y conscientemente', 'Servicio de restaurante de alta velocidad', 'Sistema de producción industrial de alimentos'], correct: 1, exp: 'Nació como respuesta al fast food y la fast life. Apuesta por lo local y lo natural.' },
+            { q: 'La bodega de vinos debe mantenerse a:', opts: ['Entre 5 y 8°C', 'Entre 10 y 15°C con ~80% de humedad', 'Entre 18 y 22°C con 60% de humedad', 'Temperatura ambiente'], correct: 1, exp: '10-15°C constante, ~80% de humedad. Oscura, ventilada y sin vibraciones.' },
+            { q: 'El jamón serrano gran reserva tiene una curación de:', opts: ['Entre 6 y 10 meses', 'Entre 10 y 12 meses', 'Entre 12 y 15 meses', 'Más de 15 meses'], correct: 3, exp: 'Bodega: 10-12 meses. Reserva: 12-15 meses. Gran Reserva: más de 15 meses.' },
+            { q: 'El free flow en restauración:', opts: ['Es un tipo de servicio a domicilio', 'Elimina las colas del self service con islas donde el cliente elige y paga antes de sentarse', 'Es sinónimo de bufé libre', 'Es un servicio exclusivo de banquetes'], correct: 1, exp: 'El free flow resuelve las colas del self service en línea con islas de libre elección.' }
+        ]
+    },
     examen: {
         nombre: 'Examen Final',
         test: [
@@ -146,13 +280,14 @@ const temas = {
 };
 
 // ESTADO
-let currentTema  = null;
-let currentMode  = null;
-let currentIndex = 0;
-let correctCount = 0;
-let results          = [];
-let flashcardsCorrect = [];
-let flashcardsWrong   = [];
+let currentTema           = null;
+let currentMode           = null;
+let currentIndex          = 0;
+let correctCount          = 0;
+let results               = [];
+let flashcardsCorrect     = [];
+let flashcardsWrong       = [];
+let currentAsignaturaGroup = null; // 'calidad' | 'cafeteria'
 
 // NAVEGACIÓN
 function showScreen(screenId) {
@@ -160,8 +295,20 @@ function showScreen(screenId) {
     document.getElementById(screenId).classList.add('active');
 }
 
+function selectAsignatura(asignatura) {
+    currentAsignaturaGroup = asignatura;
+    if (asignatura === 'calidad') {
+        showScreen('homeScreen');
+    } else if (asignatura === 'cafeteria' || asignatura === 'preelaboracion') {
+        currentTema = asignatura;
+        document.getElementById('temaTitle').textContent = temas[asignatura].nombre;
+        showScreen('modoScreen');
+    }
+}
+
 function selectTema(tema) {
     currentTema = tema;
+    currentAsignaturaGroup = 'calidad';
     if (tema === 'examen') {
         startTest();
     } else {
@@ -170,13 +317,32 @@ function selectTema(tema) {
     }
 }
 
+function goMainHome() {
+    currentTema            = null;
+    currentMode            = null;
+    currentIndex           = 0;
+    correctCount           = 0;
+    results                = [];
+    currentAsignaturaGroup = null;
+    showScreen('mainHomeScreen');
+}
+
 function goHome() {
+    goMainHome();
+}
+
+function goSubHome() {
     currentTema  = null;
     currentMode  = null;
     currentIndex = 0;
     correctCount = 0;
-    results = [];
-    showScreen('homeScreen');
+    results      = [];
+    if (currentAsignaturaGroup === 'calidad') {
+        showScreen('homeScreen');
+    } else {
+        currentAsignaturaGroup = null;
+        showScreen('mainHomeScreen');
+    }
 }
 
 function repeatMode() {

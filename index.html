@@ -3,15 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudio FP Cocina — APPCC, EDO, Alérgenos, Alteraciones</title>
+    <title>Estudio FP Hostelería</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
 
-        <!-- PANTALLA DE INICIO -->
-        <div id="homeScreen" class="screen active">
-            <h1>📚 Estudio FP Cocina</h1>
+        <!-- NUEVA HOME PRINCIPAL — SELECCIÓN DE ASIGNATURAS -->
+        <div id="mainHomeScreen" class="screen active">
+            <h1>📚 Estudio FP Hostelería</h1>
+            <p class="subtitle">Elige una asignatura para estudiar</p>
+            <div class="asignaturas-grid">
+                <div class="asignatura-card cafeteria-card" onclick="selectAsignatura('cafeteria')">
+                    <div class="asignatura-icon">☕</div>
+                    <div class="asignatura-nombre">Cafetería y Sala</div>
+                </div>
+                <div class="asignatura-card calidad-card" onclick="selectAsignatura('calidad')">
+                    <div class="asignatura-icon">🔍</div>
+                    <div class="asignatura-nombre">Calidad</div>
+                </div>
+                <div class="asignatura-card disabled">
+                    <span class="badge-proximamente">Próximamente</span>
+                    <div class="asignatura-icon">🍳</div>
+                    <div class="asignatura-nombre">Elaboración y Preelaboración</div>
+                </div>
+                <div class="asignatura-card disabled">
+                    <span class="badge-proximamente">Próximamente</span>
+                    <div class="asignatura-icon">📦</div>
+                    <div class="asignatura-nombre">Aprovisionamiento</div>
+                </div>
+                <div class="asignatura-card preelaboracion-card" onclick="selectAsignatura('preelaboracion')">
+                    <div class="asignatura-icon">🥄</div>
+                    <div class="asignatura-nombre">Preelaboración</div>
+                    <div class="asignatura-desc">Lácteos, huevos, arroz, pastas, setas</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUBHOME CALIDAD (pantalla original) -->
+        <div id="homeScreen" class="screen">
+            <button class="back-btn" onclick="goMainHome()">← Atrás</button>
+            <h1>📚 Calidad</h1>
             <p class="subtitle">Elige un tema para empezar</p>
             <div class="temas-grid">
                 <div class="tema-card appcc"        onclick="selectTema('appcc')">🔍 APPCC</div>
@@ -27,7 +59,7 @@
         <!-- PANTALLA DE SELECCIÓN DE MODO -->
         <div id="modoScreen" class="screen">
             <div class="header">
-                <button class="back-btn" onclick="goHome()">← Atrás</button>
+                <button class="back-btn" onclick="goSubHome()">← Atrás</button>
                 <h2 id="temaTitle"></h2>
             </div>
             <p class="subtitle">Elige cómo quieres estudiar</p>
@@ -44,7 +76,7 @@
         <!-- PANTALLA DE FLASHCARDS -->
         <div id="flashcardsScreen" class="screen">
             <div class="header">
-                <button class="back-btn" onclick="goHome()">← Atrás</button>
+                <button class="back-btn" onclick="goSubHome()">← Atrás</button>
                 <h2 id="flashcardTemaTitle"></h2>
             </div>
             <div class="progress-text" id="flashcardProgress"></div>
@@ -73,7 +105,7 @@
         <!-- PANTALLA DE TEST -->
         <div id="testScreen" class="screen">
             <div class="header">
-                <button class="back-btn" onclick="goHome()">← Atrás</button>
+                <button class="back-btn" onclick="goSubHome()">← Atrás</button>
                 <h2 id="testTemaTitle"></h2>
             </div>
             <div class="progress-text" id="testProgress"></div>
@@ -94,7 +126,7 @@
 
         <!-- PANTALLA DE RESULTADOS -->
         <div id="resultsScreen" class="screen">
-            <button class="back-btn" onclick="goHome()">← Atrás</button>
+            <button class="back-btn" onclick="goSubHome()">← Atrás</button>
             <div class="results-screen">
                 <div class="score-circle" id="scoreCircle">0/0</div>
                 <div class="message"    id="resultMessage"></div>
