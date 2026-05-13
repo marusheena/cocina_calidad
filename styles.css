@@ -542,6 +542,15 @@ h1 {
     background: linear-gradient(135deg, #667eea, #764ba2);
 }
 
+.asignatura-card.elaboracion-card {
+    background: linear-gradient(135deg, #e96c1f, #f7c948);
+    box-shadow: 0 10px 30px rgba(233, 108, 31, 0.35);
+}
+
+.asignatura-card.elaboracion-card:hover {
+    box-shadow: 0 15px 40px rgba(233, 108, 31, 0.55);
+}
+
 .asignatura-card.preelaboracion-card {
     background: linear-gradient(135deg, #11998e, #38ef7d);
     box-shadow: 0 10px 30px rgba(17, 153, 142, 0.35);
