@@ -624,3 +624,120 @@ h1 {
         font-size: 13px;
     }
 }
+
+/* PANTALLA DE PROGRESO */
+.progreso-header {
+    text-align: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 20px;
+    padding: 22px 20px 18px;
+    color: white;
+    margin-bottom: 22px;
+}
+
+.progreso-header-total {
+    font-size: 48px;
+    font-weight: 700;
+    display: block;
+    line-height: 1;
+}
+
+.progreso-header-label {
+    font-size: 14px;
+    opacity: 0.85;
+    display: block;
+    margin-top: 4px;
+}
+
+.progreso-header-msg {
+    font-size: 13px;
+    margin-top: 12px;
+    opacity: 0.9;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.progreso-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.progreso-card {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.progreso-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 16px;
+    color: white;
+}
+
+.progreso-card-icon {
+    font-size: 20px;
+}
+
+.progreso-card-nombre {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.progreso-card-body {
+    padding: 12px 16px 14px;
+    background: #f8f9ff;
+}
+
+.no-intentos {
+    text-align: center;
+    color: #aaa;
+    font-size: 13px;
+    padding: 6px 0;
+}
+
+.progreso-stars {
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+
+.progreso-bar-wrap {
+    height: 7px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+
+.progreso-bar-fill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.6s ease;
+}
+
+.progreso-score-text {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 7px;
+}
+
+.progreso-meta {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.progreso-mensaje {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    background: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border-left: 3px solid #667eea;
+}

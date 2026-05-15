@@ -531,6 +531,7 @@ function showTestResults() {
 
 // RESULTADOS
 function showResults(correct, total, mode) {
+    saveResult(currentTema, correct, total, mode);
     const percentage  = Math.round((correct / total) * 100);
     const scoreCircle = document.getElementById('scoreCircle');
     scoreCircle.textContent = `${correct}/${total}`;
@@ -557,6 +558,131 @@ function showResults(correct, total, mode) {
 
     showScreen('resultsScreen');
     playConfetti();
+}
+
+// PROGRESO
+const subjectsMeta = {
+    cafeteria:      { nombre: 'Cafetería y Sala', icon: '☕', color: 'linear-gradient(135deg,#f6d365,#fda085)' },
+    elaboracion:    { nombre: 'Elaboración',       icon: '🍳', color: 'linear-gradient(135deg,#e96c1f,#f7c948)' },
+    preelaboracion: { nombre: 'Preelaboración',    icon: '🥄', color: 'linear-gradient(135deg,#11998e,#38ef7d)' },
+    appcc:          { nombre: 'APPCC',             icon: '🔍', color: 'linear-gradient(135deg,#f093fb,#f5576c)' },
+    edo:            { nombre: 'EDO',               icon: '⚠️', color: 'linear-gradient(135deg,#4facfe,#00f2fe)' },
+    alergenos:      { nombre: 'Alérgenos',         icon: '🚫', color: 'linear-gradient(135deg,#43e97b,#38f9d7)' },
+    alteraciones:   { nombre: 'Alteraciones',      icon: '🔬', color: 'linear-gradient(135deg,#fa709a,#fee140)' },
+    examen:         { nombre: 'Examen Final',      icon: '🎓', color: 'linear-gradient(135deg,#667eea,#764ba2)' }
+};
+
+function saveResult(tema, score, total, mode) {
+    if (!tema) return;
+    const data = JSON.parse(localStorage.getItem('fp_progress') || '{}');
+    if (!data[tema]) data[tema] = [];
+    data[tema].push({
+        date:  new Date().toLocaleDateString('es-ES'),
+        score, total, mode,
+        pct:   Math.round(score / total * 100)
+    });
+    if (data[tema].length > 5) data[tema] = data[tema].slice(-5);
+    localStorage.setItem('fp_progress', JSON.stringify(data));
+}
+
+function getStars(pct) {
+    if (pct >= 85) return '⭐⭐⭐';
+    if (pct >= 70) return '⭐⭐☆';
+    if (pct >= 50) return '⭐☆☆';
+    return '☆☆☆';
+}
+
+function getBarColor(pct) {
+    if (pct >= 85) return 'linear-gradient(90deg,#43e97b,#38f9d7)';
+    if (pct >= 70) return 'linear-gradient(90deg,#4facfe,#00f2fe)';
+    if (pct >= 50) return 'linear-gradient(90deg,#f6d365,#fda085)';
+    return 'linear-gradient(90deg,#f093fb,#f5576c)';
+}
+
+function getMensaje(pct) {
+    if (pct >= 85) return '¡Sobresaliente! Esto lo tienes en el bolsillo 🏆';
+    if (pct >= 70) return '¡Notable! El examen está al alcance 🚀';
+    if (pct >= 50) return 'Más de la mitad bien, ¡un poco más y lo clavas! 🔥';
+    return 'Aún hay camino. Repasa y vuelve a intentarlo 💪';
+}
+
+function showProgreso() {
+    renderProgresoContent();
+    showScreen('progresoScreen');
+}
+
+function renderProgresoContent() {
+    const data          = JSON.parse(localStorage.getItem('fp_progress') || '{}');
+    const totalAttempts = Object.values(data).reduce((s, a) => s + a.length, 0);
+
+    const headerMsg =
+        totalAttempts === 0  ? '¡Haz tu primer test y empieza a ver tu progreso! 🎯' :
+        totalAttempts < 5    ? '¡Buen comienzo! Sigue practicando 🌱' :
+        totalAttempts < 10   ? '¡Buen ritmo! Ya le estás cogiendo el truco 📚' :
+        totalAttempts < 20   ? '¡Constancia de verdad! Los exámenes te conocen ya 🔥' :
+                               '¡Eres una máquina de estudiar! 👑';
+
+    let html = `
+        <div class="progreso-header">
+            <span class="progreso-header-total">${totalAttempts}</span>
+            <span class="progreso-header-label">${totalAttempts === 1 ? 'test realizado' : 'tests realizados'}</span>
+            <p class="progreso-header-msg">${headerMsg}</p>
+        </div>
+        <div class="progreso-grid">`;
+
+    for (const [key, meta] of Object.entries(subjectsMeta)) {
+        const attempts = data[key] || [];
+        html += `<div class="progreso-card">
+            <div class="progreso-card-header" style="background:${meta.color}">
+                <span class="progreso-card-icon">${meta.icon}</span>
+                <span class="progreso-card-nombre">${meta.nombre}</span>
+            </div>
+            <div class="progreso-card-body">`;
+
+        if (attempts.length === 0) {
+            html += `<div class="no-intentos">Sin intentos todavía · ¡Anímate! 🎯</div>`;
+        } else {
+            const last = attempts[attempts.length - 1];
+            const best = Math.max(...attempts.map(a => a.pct));
+            const prev = attempts.length > 1 ? attempts[attempts.length - 2] : null;
+            const diff = prev ? last.pct - prev.pct : null;
+            const trend =
+                diff === null ? '🆕 Primer intento' :
+                diff > 0      ? `📈 +${diff}% vs anterior` :
+                diff === 0    ? '➡️ Igual que antes' :
+                                `📉 ${diff}% vs anterior`;
+            const modeLabel = last.mode === 'flashcards' ? 'Flashcards' : 'Test';
+
+            html += `
+                <div class="progreso-stars">${getStars(last.pct)}</div>
+                <div class="progreso-bar-wrap">
+                    <div class="progreso-bar-fill" style="width:${last.pct}%;background:${getBarColor(last.pct)}"></div>
+                </div>
+                <div class="progreso-score-text">Último ${modeLabel}: <strong>${last.score}/${last.total} · ${last.pct}%</strong> · ${last.date}</div>
+                <div class="progreso-meta">
+                    <span>${trend}</span>
+                    <span>🏆 Mejor: ${best}%</span>
+                    <span>📝 ${attempts.length}/5 intento${attempts.length !== 1 ? 's' : ''}</span>
+                </div>
+                <div class="progreso-mensaje">${getMensaje(last.pct)}</div>`;
+        }
+
+        html += `</div></div>`;
+    }
+
+    html += `</div>
+        <button class="btn btn-secondary" style="width:100%;margin-top:20px;font-size:13px;color:#999;" onclick="resetProgress()">
+            🗑️ Borrar historial
+        </button>`;
+
+    document.getElementById('progresoContent').innerHTML = html;
+}
+
+function resetProgress() {
+    if (confirm('¿Segura que quieres borrar todo el historial de progreso?')) {
+        localStorage.removeItem('fp_progress');
+        renderProgresoContent();
+    }
 }
 
 // CONFETTI
